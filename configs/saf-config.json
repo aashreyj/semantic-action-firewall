@@ -1,0 +1,50 @@
+{
+  "workspacePath": "..",
+  "detector": {
+    "base64": true,
+    "hexEscapes": true,
+    "evalNesting": true,
+    "pipeToShell": true,
+    "knownSignatures": true,
+    "longEncodedSegment": true,
+    "maxHexEscapes": 5,
+    "maxEvalNesting": 1,
+    "entropyThreshold": 4.5,
+    "minLengthForEntropy": 48
+  },
+  "policy": {
+    "mode": "opa",
+    "opaUrl": "http://localhost:8181/v1/data/saf/result",
+    "timeoutMs": 100,
+    "fallback": "local"
+  },
+  "policyFile": "./default-policy.json",
+  "capabilityFile": "./tool-capabilities.json",
+  "auditLogPath": "../logs/saf-audit.log",
+  "intentCheckEnabled": true,
+  "intent": {
+    "mode": "pi-ai",
+    "provider": "google",
+    "model": "gemma-4-26b-a4b-it",
+    "apiKeyEnvVar": "GOOGLE_GENERATIVE_AI_API_KEY",
+    "timeoutMs": 15000,
+    "doubleCheck": true
+  },
+  "normalizer": {
+    "mode": "hybrid",
+    "provider": "google",
+    "model": "gemma-4-26b-a4b-it",
+    "apiKeyEnvVar": "GOOGLE_GENERATIVE_AI_API_KEY",
+    "timeoutMs": 15000,
+    "maxPayloadChars": 8000,
+    "cacheEnabled": true,
+    "cacheMaxEntries": 500
+  },
+  "sandbox": {
+    "enabled": true,
+    "failOpen": false,
+    "timeoutMs": 30000
+  },
+  "defaultSessionId": "saf-session",
+  "defaultAgentId": "saf-agent"
+}

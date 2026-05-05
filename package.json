@@ -1,0 +1,46 @@
+{
+  "name": "semantic-action-firewall",
+  "version": "0.1.0",
+  "description": "Runtime action-level security layer for coding agents.",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "demo:mock-flow": "tsx src/dev.ts",
+    "example:pi-agent": "tsx examples/pi-agent-core.ts",
+    "live:preflight": "tsx scripts/live-preflight.ts",
+    "live:scenarios": "tsx scripts/live-scenarios.ts",
+    "live:all": "tsx scripts/live-all.ts",
+    "benchmark:compare": "tsx scripts/run-comparison-benchmark.ts",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "llm",
+    "security",
+    "agent",
+    "policy",
+    "saf"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sandbox-runtime": "^0.0.49",
+    "@mariozechner/pi-agent-core": "^0.64.0",
+    "@mariozechner/pi-ai": "^0.64.0",
+    "@sinclair/typebox": "^0.34.41",
+    "pino": "^9.5.0",
+    "shell-quote": "^1.8.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/shell-quote": "^1.7.5",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

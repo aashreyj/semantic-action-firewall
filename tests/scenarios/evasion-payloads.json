@@ -1,0 +1,10 @@
+[
+  {
+    "name": "base64-shell",
+    "payload": "echo cm0gLXJmIC8= | base64 -d | sh"
+  },
+  {
+    "name": "hex-encoded",
+    "payload": "python -c \"print('\\x72\\x6d\\x20\\x2d\\x72\\x66\\x20\\x2f')\""
+  }
+]

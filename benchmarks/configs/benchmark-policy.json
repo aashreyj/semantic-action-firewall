@@ -1,0 +1,29 @@
+{
+  "defaultBehavior": "deny",
+  "scopes": {
+    "filesystem": {
+      "read": "allow",
+      "write": "flag_intent",
+      "delete": "require_approval"
+    },
+    "process": {
+      "execute": "flag_intent"
+    },
+    "network": {
+      "connect": "allow"
+    },
+    "unknown": {
+      "unknown": "require_approval"
+    }
+  },
+  "allowedDomains": [
+    "api.github.com",
+    "registry.npmjs.org"
+  ],
+  "protectedPaths": [
+    "/",
+    "/etc",
+    "/home",
+    "/root"
+  ]
+}

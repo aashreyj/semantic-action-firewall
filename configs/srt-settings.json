@@ -1,0 +1,22 @@
+{
+  "network": {
+    "allowedDomains": [],
+    "deniedDomains": [
+      "169.254.169.254"
+    ]
+  },
+  "filesystem": {
+    "allowWrite": [
+      "/tmp"
+    ],
+    "denyRead": [
+      "~/.ssh",
+      "~/.aws"
+    ],
+    "denyWrite": [
+      ".env",
+      "*.pem",
+      "*.key"
+    ]
+  }
+}

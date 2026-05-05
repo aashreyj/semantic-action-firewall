@@ -1,0 +1,72 @@
+{
+  "tools": {
+    "bash": {
+      "capabilities": [
+        "filesystem.read",
+        "process.execute"
+      ],
+      "workspaceOnly": true,
+      "allowedDomains": [
+        "api.github.com",
+        "registry.npmjs.org"
+      ]
+    },
+    "python": {
+      "capabilities": [
+        "filesystem.read",
+        "filesystem.write",
+        "process.execute"
+      ],
+      "workspaceOnly": true,
+      "allowedDomains": [
+        "api.github.com",
+        "registry.npmjs.org"
+      ]
+    },
+    "python3": {
+      "capabilities": [
+        "filesystem.read",
+        "filesystem.write",
+        "process.execute"
+      ],
+      "workspaceOnly": true,
+      "allowedDomains": [
+        "api.github.com",
+        "registry.npmjs.org"
+      ]
+    },
+    "read_file": {
+      "capabilities": [
+        "filesystem.read"
+      ],
+      "workspaceOnly": true
+    },
+    "write_file": {
+      "capabilities": [
+        "filesystem.write"
+      ],
+      "workspaceOnly": true
+    },
+    "edit_file": {
+      "capabilities": [
+        "filesystem.read",
+        "filesystem.write"
+      ],
+      "workspaceOnly": true
+    },
+    "list_directory": {
+      "capabilities": [
+        "filesystem.read"
+      ],
+      "workspaceOnly": true
+    },
+    "web_fetch": {
+      "capabilities": [
+        "network.connect"
+      ],
+      "allowedDomains": [
+        "api.github.com"
+      ]
+    }
+  }
+}
